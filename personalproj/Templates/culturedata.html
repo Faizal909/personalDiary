@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Cultural Data</title>
+    <style>
+        body{
+        background: linear-gradient(135deg, #f2a365, #ff639a);
+        }
+        .background-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        h3 {
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+            text-shadow: 2px 2px 5px rgba(47, 165, 229, 0.451);
+        }
+        .align {
+            text-align: center;
+            color: white;
+        }
+        thead {
+            border-bottom: 1px solid black;
+        }
+        .align2{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="background-image"></div>
+    <div class="border rounded p-4 m-4 text-dark" style="background-color:rgba(105, 143, 161, 0.377);">
+        <input type="button" class="display-4 pl-4 ml-4 btn btn-dark rounded-pill" value="Back" onclick="history.back()"/>
+        <h3>🥻 Cultural Details 🥻</h3>
+        <hr>
+        <table class="table">
+            <thead>
+            <tr class="align">
+                <th><i>Name</i></th>
+                <th><i>residence</i></th>
+                <th><i>language</i></th>
+                <th><i>ethnicity</i></th>
+                <th><i>practices</i></th>
+                <th><i>festivals</i></th>
+                <th><i>clothing</i></th>
+                <th><i>additional</i></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for a in culturekey %}
+            <tr class="align2">
+                <td><i>{{ a.Name }}</i></td>
+                <td><i>{{ a.residence }}</i></td>
+                <td><i>{{ a.language }}</i></td>
+                <td><i>{{ a.ethnicity }}</i></td>
+                <td><i>{{ a.practices }}</i></td>
+                <td><i>{{ a.festivals }}</i></td>
+                <td><i>{{ a.clothing }}</i></td>
+              <td><i>{{ a.additional }}</i></td>
+
+                <td>
+                    <a href="/path20/{{ a.id }}"
+                       class="btn btn-dark btn-outline-transparent rounded text-light">Edit/Update</a>
+                     <a href="/path21/{{ a.id }}"
+                       class="btn btn-dark btn-outline-transparent rounded text-light">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+    </div>
+</div>
+</body>
+</html>

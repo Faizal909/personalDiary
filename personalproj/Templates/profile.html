@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+      background: linear-gradient(135deg, #f2a365, #ff639a);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #ddd;
+    }
+
+
+
+    nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+    }
+
+    nav ul li {
+      float: left;
+
+    }
+
+    nav ul li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+    }
+
+    nav ul li a:hover {
+    background-color: #111;
+    }
+
+
+.logout{
+    float:right;
+    }
+         /* Main content styling */
+        .content {
+
+            text-align: center;
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .content h1 {
+        color:white;
+        font-family: Lucida Console;
+            font-size: 3.5em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        .content p {
+
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <nav>
+    <ul id='navbar'>
+      <li><a href="{% url 'home' %}" >Home</a></li>
+        <li><a href="/path3/">User Data Form</a></li>
+
+        <li><a href="/path5/">Education Form</a></li>
+
+        <li><a href="/path7/">  Medical Form</a></li>
+
+        <li> <a href="/path9/"> Financial data Form</a></li>
+
+        <li> <a href="/path14/"> Cultural data Form</a></li>
+
+
+        <li><a href="/path4/">Show User Data</a></li>
+        <li><a href="/path6/"> Show Educational Details</a></li>
+        <li><a href="/path8/"> Show Medical Details</a></li>
+        <li><a href="/path10/"> Show Financial details</a></li>
+        <li><a href="/path15/"> Show Cultural details</a></li>
+
+
+
+    </div>
+
+
+
+
+
+      <div class="logout">
+           <li><a href="/path24/" >About Us</a></h4></li>
+        <li><a href="/path11/" >Log Out</a></h4></li>
+       </div>
+    </ul>
+  </nav>
+
+
+
+    <!-- Button container for centered buttons -->
+<div class="content" >
+        <h1>Welcome to your Profile </h1>
+        <p> This is your profile page Fill your details from the above Toolbar </p>
+</div>
+
+</body>
+
+
+
+</html>

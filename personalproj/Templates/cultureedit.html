@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Details Form</title>
+    <style>
+        body {
+        background: linear-gradient(135deg, #f2a365, #ff639a);
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px 40px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #555555;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        h1 {
+
+            background-color: blue;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            margin-bottom:20px;
+        }
+        .button2 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: none;
+            font-size: 18px;
+            color: rgba(105, 143, 161, 0.377);
+            cursor: pointer;
+        }
+
+        .button2:hover {
+            color: #ff639a;
+        }
+        }
+    </style>
+</head>
+<body>
+<div class="button2"> <button class="back-button" onclick="goBack()">Back</button></div>
+
+    <div class="form-container">
+        <h1>🥻 Edit Cultural Details 🥻</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name1" value="{{ key22.Name }}" required>
+
+
+
+            <label for="residence">Country of Residence:</label>
+            <input type="text" id="residence" name="name2" value="{{ key22.residence }}" required>
+
+            <label for="language">Native Language:</label>
+            <input type="text" id="language" name="name3" value="{{ key22.language}}" required>
+
+            <label for="ethnicity">Ethnic Background:</label>
+            <input type="text" id="ethnicity" name="name4"  value="{{ key22.ethnicity}}" required>
+
+            <label for="practices">Cultural Practices:</label>
+            <input type="text" id="practices" name="name5"  value="{{ key22.practices}}" placeholder="Describe any unique cultural practices...">
+
+            <label for="festivals">Festivals Celebrated:</label>
+            <input type="text" id="festivals" name="name6"  value="{{ key22.festivals}}" placeholder="List the festivals celebrated...">
+
+            <label for="clothing">Traditional Clothing:</label>
+            <input type="text" id="clothing" name="name7" value="{{ key22.clothing}}" placeholder="Describe traditional clothing preferences...">
+
+            <label for="additional">Additional Information:</label>
+            <input type="text" id="additional" name="name8" value="{{ key22.additional}}" placeholder="Any other details about your culture...">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+<script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
